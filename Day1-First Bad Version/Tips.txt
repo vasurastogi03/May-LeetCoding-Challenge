@@ -1,0 +1,1 @@
+If we use mid = (lw + up)/2 then this may lead to overflow in some languages. To prevent this we use mid = lw + (up - lw)/2.
