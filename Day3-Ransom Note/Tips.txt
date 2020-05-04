@@ -1,0 +1,1 @@
+--Learnt about Hash mapping in python using Dictionaries

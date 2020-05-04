@@ -1,0 +1,39 @@
+//In C++ using bitwise Operator
+
+/*
+num          = 00000110
+mask         = 00000111
+~num         = 11111001
+mask & ~num  = 00000001
+*/
+int findComplement( int num ) {
+	int mask = 0, tmp=num;
+	while( tmp ) {
+		tmp = tmp >> 1;
+		mask = mask << 1;
+		mask = mask | 1;
+	}
+	return ~num & mask;
+}
+
+
+#Using PYTHON
+#This is a simple approach where we use the logic that the XOR operation between a number and its complement results in 111..111
+#Taking an example 5
+#We find the smallest (2^n)-1 number greater than 5 (101) which in this case is 7 (111)
+#Performing XOR with these two numbers will result in the bitwise complement of the original number.
+#101 ^ 111 -> 010
+
+def findComplement(self,num):
+    t=1
+    while num>t:
+        t=2*t+1
+    return t^num
+
+
+#Another Approach
+class Solution:
+    def findComplement(self, num: int) -> int:
+        return num^(2**(len(bin(num)[2:]))-1)
+
+#bin(5)  =  '0b101'

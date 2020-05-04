@@ -1,0 +1,25 @@
+SAME FOR C++ AND PYTHON
+
+--Learnt how to get a complement of a number using XOR( ^ ) -- i.e. bitwise XOR with all 1.
+
+<< (left shift) Takes two numbers, left shifts the bits of the first operand, the second operand decides the number of places to shift. Or in other words left shifting an integer “x” with an integer “y” (x<<y) is equivalent to multiplying x with 2^y (2 raise to power y).
+
+>> (right shift) Takes two numbers, right shifts the bits of the first operand, the second operand decides the number of places to shift.Similarly right shifting (x>>y) is equivalent to dividing x with 2^y.
+
+
+ & (bitwise AND) takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1.
+
+ | (bitwise OR) takes two numbers as operands and does OR on every bit of two numbers. The result of OR is 1 if any of the two bits is 1
+
+ ^ (bitwise XOR) takes two numbers as operands and does XOR on every bit of two numbers. The result of XOR is 1 if the two bits are different.
+
+ ~ (bitwise NOT) takes one number and inverts all bits of it
+
+
+int() function in Python and Python3 converts a number in given base to decimal. Syntax : int(string, base) .string : consists of 1's and 0's
+base : (integer value) base of the number. Returns an integer value, which is equivalent of binary string in the given base. 
+Eg.
+int('100') with base 2 =  4
+int('100') with base 4 =  16
+int('100') with base 8 =  64
+int('100') with base 16 =  256

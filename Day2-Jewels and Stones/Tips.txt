@@ -1,0 +1,10 @@
+--Learnt about string class in C++ and some of its functions - 
+	1) .at(i) - 
+
+
+--About Hashset(Java) equivalent in C++
+	-std::unordered_set
+	-unordered_map
+
+--foreach working C++ Eg. for(char c : String)
+	
