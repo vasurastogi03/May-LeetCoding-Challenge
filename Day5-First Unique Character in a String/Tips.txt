@@ -1,0 +1,5 @@
+1)Learnt about Fast I/O technique in C++ for Competitive Programming. Refer https://www.geeksforgeeks.org/fast-io-for-competitive-programming/
+
+2)For auto - As all the types are deduced in compiler phase only, the time for compilation increases slightly but it does not affect the run time of the program.
+
+3)

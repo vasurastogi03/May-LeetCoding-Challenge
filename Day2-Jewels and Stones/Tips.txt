@@ -1,10 +1,83 @@
---Learnt about string class in C++ and some of its functions - 
+1)Learnt about string class in C++ and some of its functions - 
 	1) .at(i) - 
 
 
---About Hashset(Java) equivalent in C++
-	-std::unordered_set
-	-unordered_map
 
---foreach working C++ Eg. for(char c : String)
-	
+2)std::unordered_set
+
+An unordered_set is implemented using a hash table where keys are hashed into indices of a hash table so that the insertion is always randomized. All operations on the unordered_set takes constant time O(1) on an average which can go up to linear time O(n)
+
+The unordered_set can contain key of any type – predefined or user-defined data structure but when we define key of type user define the type, we need to specify our comparison function according to which keys will be compared.
+
+Set is an ordered sequence of unique keys whereas unordered_set is a set in which key can be stored in any order, so unordered.
+
+    // declaring set for storing string data-type 
+    unordered_set <string> stringSet ; 
+  
+    // inserting various string, same string will be stored 
+    // once in set 
+  
+    stringSet.insert("code") ; 
+    stringSet.insert("in") ; 
+    stringSet.insert("c++") ; 
+    stringSet.insert("is") ; 
+    stringSet.insert("fast") ; 
+  
+    string key = "slow" ; 
+  
+    //  find returns end iterator if key is not found, 
+    //  else it returns iterator to that key 
+  
+    if (stringSet.find(key) == stringSet.end()) 
+        cout << key << " not found" << endl << endl ; 
+    else
+        cout << "Found " << key << endl << endl ; 
+  
+    key = "c++"; 
+    if (stringSet.find(key) == stringSet.end()) 
+        cout << key << " not found\n" ; 
+    else
+        cout << "Found " << key << endl ; 
+  
+    // now iterating over whole set and printing its 
+    // content 
+    cout << "\nAll elements : "; 
+    unordered_set<string> :: iterator itr; 
+    for (itr = stringSet.begin(); itr != stringSet.end(); itr++) 
+        cout << (*itr) << endl;
+
+The find() function returns an iterator to end() if key is not there in set, otherwise an iterator to the key position is returned. The iterator works as a pointer to the key values so that we can get the key by dereferencing them using * operator.
+
+
+3)std::unordered_map
+Unordered map is an associative container that contains key-value pairs with unique keys. Search, insertion, and removal of elements have average O(1) (constant) time complexity.
+
+Internally, the elements are not sorted in any particular order, but organized into buckets. Which bucket an element is placed into depends entirely on the hash of its key. This allows fast access to individual elements, since once the hash is computed, it refers to the exact bucket the element is placed into.
+Eg.
+HEADER FILE - <unordered_map>
+std::unordered_map<std::string, std::string> u = {
+{"RED","#FF0000"},
+{"GREEN","#00FF00"},
+{"BLUE","#0000FF"}
+};
+
+// Iterate and print keys and values of unordered_map
+for( const auto& n : u ) {
+        std::cout << "Key:[" << n.first << "] Value:[" << n.second << "]\n";
+    }
+//Accessing a value based on particular key
+std::cout << "The HEX of color RED is:[" << u["RED"] << "]\n";
+
+
+
+
+4)foreach working C++ Eg. for(char c : str)
+Syntax :
+for (element_declaration : array)
+   statement;
+
+
+--Because element_declaration should have the same type as the array elements, foreach is an ideal case in which to use the auto keyword, and let C++ deduce the type of the array elements for us.
+Eg. for (auto number : fibonacci)
+
+
