@@ -1,0 +1,1 @@
+1)Learnt about vectors of vectors(basically dynamic 2D matrix) and how to access them.
